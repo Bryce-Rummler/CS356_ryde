@@ -31,3 +31,7 @@ expo-cli start --tunnel
 You should now be able to open the project on the app from your phone. As you make changes to the code and save, it will be updated on the app.
 
 Also, make sure you are on the same wifi network on both devices.
+
+## Development.
+
+Open up App.js to start working on your app!
