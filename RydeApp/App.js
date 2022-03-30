@@ -1,8 +1,8 @@
 import * as React from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Button } from "react-native";
-import Animated from "react-native-reanimated";
 import BottomSheet from "reanimated-bottom-sheet";
+import ToFromBox from "./Components/ToFromBox";
 
 export default function App() {
   const renderContent = () => (
@@ -30,6 +30,7 @@ export default function App() {
 
   return (
     <>
+      <ToFromBox />
       <View style={styles.container}>
         <Text>Map component should go here</Text>
         <StatusBar style="auto" />
@@ -51,5 +52,6 @@ const styles = StyleSheet.create({
     backgroundColor: "lightblue",
     alignItems: "center",
     justifyContent: "center",
+    zIndex: -1,
   },
 });
