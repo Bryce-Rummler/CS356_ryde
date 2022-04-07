@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Button, Image, TextInput } from "react-native";
 import { FlipInEasyX } from "react-native-reanimated";
 
-export default function timeTableBox() {
+export default function TimeTableBox() {
 
   return (
     <>
@@ -14,11 +14,21 @@ export default function timeTableBox() {
           />
           <Text>Arriving</Text>
           <Text>5 minutes</Text>
-          <Text></hr></Text>
+          <View
+            style={{
+              borderBottomColor: 'grey',
+              borderBottomWidth: 1,
+            }}
+          />
         </View>
           <Text>Pick up:</Text>
           <Text>Drop off:</Text>
-          <Text></hr></Text>
+          <View
+            style={{
+              borderBottomColor: 'grey',
+              borderBottomWidth: 1,
+            }}
+          />
         <View>
         <View>
           <Text>Schedule</Text>
@@ -27,7 +37,12 @@ export default function timeTableBox() {
           <Text> Pickups:</Text>
           <Text> Every hour e.g. 1:00pm</Text>
           <Text> Every 25 minute e.g. 1:25pm</Text>
-          <Text></hr></Text>
+          <View
+            style={{
+              borderBottomColor: 'grey',
+              borderBottomWidth: 1,
+            }}
+          />
         </View>
         <View>
           <Text>Webiste</Text>
