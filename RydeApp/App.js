@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Button } from "react-native";
 import BottomSheet from "reanimated-bottom-sheet";
 import ToFromBox from "./Components/ToFromBox";
 import TimeTableBox from "./Components/TimeTableBox"
+import MapView from 'react-native-maps';
 
 export default function App() {
   const renderContent = () => (
@@ -34,7 +35,14 @@ export default function App() {
     <>
       <ToFromBox />
       <View style={styles.container}>
-        <Text>Map component should go here</Text>
+          <MapView
+            initialRegion={{
+              latitude: 40.2518,
+              longitude: -111.6493,
+              latitudeDelta: 0.0922,
+              longitudeDelta: 0.0421,
+            }}
+          />
         <StatusBar style="auto" />
       </View>
       <BottomSheet
