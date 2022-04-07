@@ -12,7 +12,29 @@ export default function timeTableBox() {
             style={styles.tofromicon}
             source={require("../assets/bus_icon.png")}
           />
-       
+          <Text>Arriving</Text>
+          <Text>5 minutes</Text>
+          <Text></hr></Text>
+        </View>
+          <Text>Pick up:</Text>
+          <Text>Drop off:</Text>
+          <Text></hr></Text>
+        <View>
+        <View>
+          <Text>Schedule</Text>
+          <Text> Mon-Thurs: 8am-9pm</Text>
+          <Text> Fri: 8am-6pm</Text>
+          <Text> Pickups:</Text>
+          <Text> Every hour e.g. 1:00pm</Text>
+          <Text> Every 25 minute e.g. 1:25pm</Text>
+          <Text></hr></Text>
+        </View>
+        <View>
+          <Text>Webiste</Text>
+        </View>
+          <Text></Text>
+        </View>
+       </View>
     </>
   );
 }
