@@ -18,44 +18,46 @@ export default function TimeTableBox() {
             style={{
               borderBottomColor: 'grey',
               borderBottomWidth: 3,
-              width: 100,
+              width: 300,
               marginBottom: 10,
             }}
           />
-        </View>
           <Text>Pick up:</Text>
           <Text>Drop off:</Text>
+
           <View
             style={{
               borderBottomColor: 'grey',
               borderBottomWidth: 3,
-              width: 100,
+              width: 300,
               marginBottom: 10,
             }}
           />
-        <View>
-        <View>
           <Text>Schedule</Text>
-          <Text> Mon-Thurs: 8am-9pm</Text>
-          <Text> Fri: 8am-6pm</Text>
-          <Text> Pickups:</Text>
-          <Text> Every hour e.g. 1:00pm</Text>
-          <Text> Every 25 minute e.g. 1:25pm</Text>
+          <Text>Mon - Thurs:    8am-9pm</Text>
+          <Text>Friday:              8am-6pm</Text>
+          <Text>Pickups:</Text>
+          <Text>Every hour e.g. 1:00pm</Text>
+          <Text>Every 25th minute e.g. 1:25pm</Text>
+
           <View
             style={{
               borderBottomColor: 'grey',
               borderBottomWidth: 3,
-              width: 100,
+              width: 300,
               marginBottom: 10,
             }}
           />
+
+        <Text>Website</Text>
+        <Image
+            style={styles.tofromicon}
+            source={require("../assets/link_icon.png")}
+          />
+
+
         </View>
-        <View>
-          <Text>Webiste</Text>
-        </View>
-          <Text></Text>
-        </View>
-       </View>
+      </View>
     </>
   );
 }
@@ -76,9 +78,10 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   tofromicon: {
-    height: 68,
+    height: 50,
     resizeMode: "contain",
-    marginRight: 5,
+    marginRight: 20,
+    marginLeft: 0,
   },
   line: {
     borderBottomWidth: 2,
