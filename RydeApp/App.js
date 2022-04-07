@@ -3,7 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Button } from "react-native";
 import BottomSheet from "reanimated-bottom-sheet";
 import ToFromBox from "./Components/ToFromBox";
-import timeTableBox from "./Components/timeTableBox"
+import TimeTableBox from "./Components/TimeTableBox"
 
 export default function App() {
   const renderContent = () => (
@@ -24,7 +24,7 @@ export default function App() {
         }}
       />
       <Text>Swipe up for more info about bus route</Text>
-      <timeTableBox></timeTableBox>
+      <TimeTableBox></TimeTableBox>
     </View>
   );
 
