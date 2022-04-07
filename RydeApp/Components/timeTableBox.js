@@ -17,7 +17,9 @@ export default function TimeTableBox() {
           <View
             style={{
               borderBottomColor: 'grey',
-              borderBottomWidth: 1,
+              borderBottomWidth: 3,
+              width: 100,
+              marginBottom: 10,
             }}
           />
         </View>
@@ -26,7 +28,9 @@ export default function TimeTableBox() {
           <View
             style={{
               borderBottomColor: 'grey',
-              borderBottomWidth: 1,
+              borderBottomWidth: 3,
+              width: 100,
+              marginBottom: 10,
             }}
           />
         <View>
@@ -40,7 +44,9 @@ export default function TimeTableBox() {
           <View
             style={{
               borderBottomColor: 'grey',
-              borderBottomWidth: 1,
+              borderBottomWidth: 3,
+              width: 100,
+              marginBottom: 10,
             }}
           />
         </View>
