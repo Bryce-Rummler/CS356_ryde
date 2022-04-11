@@ -20,8 +20,8 @@ export default function TimeTableBox() {
 
           <View style={styles.line}></View>
          {/* div here */}
-          <Text>Pick up:</Text>
-          <Text>Drop off:</Text>
+          <Text style={styles.pickdropplabel}>Pick up:        1:00pm</Text>
+          <Text style={styles.pickdropplabel}>Drop off:       1:15pm</Text>
 
           <View style={styles.line}></View>
          {/* div here */}
@@ -78,17 +78,29 @@ const styles = StyleSheet.create({
   },
   bold: {
     fontWeight: 'bold',
-    fontSize:24
+    fontSize:32
   },
   boldsmall:{
     fontWeight: 'bold'
   },
   italic: {
     fontStyle: 'italic'},
-  underline: {textDecorationLine: 'underline'},
+
+  underline: {
+    textDecorationLine: 'underline',
+    fontSize:18,
+    marginTop: 3,
+    marginBottom:3
+  
+  },
   
   webitem: {
     alignItems: 'center'
+  },
+  pickdropplabel:{
+    fontSize: 20,
+    marginBottom:3,
+    marginTop:3
   }
 
 });
