@@ -46,9 +46,6 @@ export default function ToFromBox(props) {
   const [to, onChangeTo] = React.useState("450 North");
   const [searchSug, setSearchSug] = React.useState(false);
   const [fromBox, setFromBox] = React.useState(true);
-  const [image, setImage] = React.useState(
-    require("./../assets/map_branbury_6.png")
-  );
 
   setSearchSugTrue = (fromOrTo) => {
     if (fromOrTo === "from") {
