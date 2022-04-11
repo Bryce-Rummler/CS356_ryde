@@ -20,21 +20,35 @@ function getRoutes() {
   // console.log(routes);
   let routeList = [];
   for (const route of routes) {
+    dests = route.destinations;
+    // console.log(dests);
+    destList = [];
+    for (const dest of dests) {
+      if (dest !== undefined) {
+        // console.log(dest.dest);
+        destList.push(dest.dest);
+      }
+    }
+
     routeList.push({
       key: route.key,
       route: route.route,
       stop: route.stop,
       color: route.color,
+      destinations: destList,
     });
   }
   return routeList;
 }
 
 export default function ToFromBox(props) {
-  const [from, onChangeFrom] = React.useState("Brigham Young University");
-  const [to, onChangeTo] = React.useState("Branbury");
+  const [from, onChangeFrom] = React.useState("Wilkinson Center");
+  const [to, onChangeTo] = React.useState("450 North");
   const [searchSug, setSearchSug] = React.useState(false);
   const [fromBox, setFromBox] = React.useState(true);
+  const [image, setImage] = React.useState(
+    require("./../assets/map_branbury_6.png")
+  );
 
   setSearchSugTrue = (fromOrTo) => {
     if (fromOrTo === "from") {

@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Button } from "react-native";
 import BottomSheet from "reanimated-bottom-sheet";
 import ToFromBox from "./Components/ToFromBox";
 import MapPlaceholder from "./Components/MapPlaceholder";
+import { set } from "react-native-reanimated";
 
 export default function App() {
   const [from, setFromBox] = React.useState({
@@ -11,6 +12,7 @@ export default function App() {
     route: "",
     stop: "",
     color: "",
+    destinations: [],
   });
 
   const [to, setToBox] = React.useState({
@@ -18,6 +20,27 @@ export default function App() {
     route: "",
     stop: "",
     color: "",
+    destinations: [],
+  });
+
+  const [validRoute, setValidRoute] = React.useState(true);
+
+  const [image, setImage] = React.useState(
+    require("./assets/map_king_henry_0.png")
+  );
+
+  React.useEffect(() => {
+    // console.log("from.route = " + from.route);
+    // console.log("to.route = " + to.route);
+    if (from.route == to.route) {
+      // console.log("equal");
+      if (from.route == "Branburry") {
+        setValidRoute(true);
+        setImage(require("./assets/map_branbury_6.png"));
+      }
+    } else {
+      setValidRoute(false);
+    }
   });
 
   updateFrom = (route) => {
@@ -26,10 +49,11 @@ export default function App() {
       route: route.route,
       stop: route.stop,
       color: route.color,
+      destinations: route.destinations,
     };
     setFromBox(newRoute);
-    console.log("update from called...");
-    console.log(newRoute);
+    // console.log("update from called...");
+    // console.log(newRoute);
   };
 
   updateTo = (route) => {
@@ -38,10 +62,11 @@ export default function App() {
       route: route.route,
       stop: route.stop,
       color: route.color,
+      destinations: route.destinations,
     };
     setToBox(newRoute);
-    console.log("update to called....");
-    console.log(newRoute);
+    // console.log("update to called....");
+    // console.log(newRoute);
   };
 
   const renderContent = () => (
@@ -51,6 +76,9 @@ export default function App() {
         padding: 10,
         height: 450,
         alignItems: "center",
+        borderColor: "gray",
+        borderWidth: 1,
+        borderRadius: 10,
       }}
     >
       <View
@@ -71,7 +99,7 @@ export default function App() {
     <>
       <ToFromBox app={this} />
       <View style={styles.container}>
-        <MapPlaceholder from={from} to={to} />
+        <MapPlaceholder from={from} to={to} image={image} valid={validRoute} />
         <StatusBar style="auto" />
       </View>
       <BottomSheet
@@ -88,7 +116,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "lightblue",
+    backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
     zIndex: -1,

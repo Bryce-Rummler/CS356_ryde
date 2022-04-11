@@ -4,6 +4,9 @@
             "key": 111,
             "route": "Branburry",
             "stop": "Carriage Cove/Old Mill",
+            "destinations": [{
+                "dest": "Museum of Art"
+                }],
             "color": "#7f3f39",
             "departures": [
                 {
@@ -28,6 +31,9 @@
             "key": 112,
             "route": "Branburry",
             "stop": "Branbury",
+            "destinations": [{
+                "dest": "Museum of Art"
+                }],
             "color": "#7f3f39",
             "departures": [
                 {
@@ -52,6 +58,14 @@
             "key": 113,
             "route": "Branburry",
             "stop": "Museum of Art",
+            "destinations": [
+                {
+                "dest": "Branbury"
+                },
+                {
+                    "dest": "Carriage Cove/Old Mill"
+                }
+            ],
             "color": "#7f3f39",
             "departures": [
                 
@@ -62,6 +76,7 @@
             "route": "Wyview",
             "stop": "Raintree",
             "color": "#bb181e",
+            "destinations": [],
             "departures": [
                 
             ]
@@ -70,6 +85,7 @@
             "key": 115,
             "route": "Wyview",
             "stop": "Wyview Creamery",
+            "destinations": [],
             "color": "#bb181e",
             "departures": [
                 
@@ -79,6 +95,7 @@
             "key": 116,
             "route": "Wyview",
             "stop": "Museum of Art",
+            "destinations": [],
             "color": "#bb181e",
             "departures": [
                 
@@ -88,6 +105,7 @@
             "key": 117,
             "route": "West",
             "stop": "Hospital",
+            "destinations": [],
             "color": "#0ba14b",
             "departures": [
                 
@@ -97,6 +115,7 @@
             "key": 118,
             "route": "West",
             "stop": "500 North 100 West",
+            "destinations": [],
             "color": "#0ba14b",
             "departures": [
                 
@@ -106,6 +125,7 @@
             "key": 119,
             "route": "West",
             "stop": "REC Center",
+            "destinations": [],
             "color": "#0ba14b",
             "departures": [
                 
@@ -115,6 +135,7 @@
             "key": 120,
             "route": "West",
             "stop": "Museum of Art",
+            "destinations": [],
             "color": "#0ba14b",
             "departures": [
                 
