@@ -1,4 +1,4 @@
-import moment from "moment";
+// import moment from "moment";
 import React from "react";
 import {
   StyleSheet,
@@ -30,7 +30,7 @@ function getRoutes() {
   return routeList;
 }
 
-export default function ToFromBox() {
+export default function ToFromBox(props) {
   const [from, onChangeFrom] = React.useState("Brigham Young University");
   const [to, onChangeTo] = React.useState("Branbury");
   const [searchSug, setSearchSug] = React.useState(false);
@@ -49,11 +49,12 @@ export default function ToFromBox() {
     setSearchSug(false);
   };
 
-  fillBox = (stop) => {
+  fillBox = (route) => {
     if (fromBox) {
-      onChangeFrom(stop);
+      onChangeFrom(route.stop);
+      props.app.updateFrom(route);
     } else {
-      onChangeTo(stop);
+      onChangeTo(route.stop);
     }
   };
 
@@ -70,7 +71,7 @@ export default function ToFromBox() {
       <TouchableOpacity
         key={route.key}
         onPress={() => {
-          fillBox(route.stop);
+          fillBox(route);
         }}
       >
         <View style={styles.searchItem}>

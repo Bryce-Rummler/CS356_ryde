@@ -5,6 +5,31 @@ import BottomSheet from "reanimated-bottom-sheet";
 import ToFromBox from "./Components/ToFromBox";
 
 export default function App() {
+
+  const [from, setFromBox] = React.useState({
+    key: 0,
+    route: "",
+    stop: "",
+    color: ""
+  })
+
+  const [to, setToBox] = React.useState({
+    key: 0,
+    route: "",
+    stop: "",
+    color: ""
+  })
+
+  updateFrom = (route) => {
+    newRoute = {
+      key: route.key,
+      route: route.route,
+      stop: route.stop,
+      color: route.color
+    }
+    setFromBox(newRoute);
+  }
+
   const renderContent = () => (
     <View
       style={{
@@ -30,7 +55,7 @@ export default function App() {
 
   return (
     <>
-      <ToFromBox />
+      <ToFromBox app={this} />
       <View style={styles.container}>
         <Text>Map component should go here</Text>
         <StatusBar style="auto" />
