@@ -7,56 +7,39 @@ export default function TimeTableBox() {
   return (
     <>
       <View style={styles.container}>
-        <View>
           <Image
-            style={styles.tofromicon}
+            style={styles.busicon}
             source={require("../assets/bus_icon.png")}
           />
-          <Text>Arriving</Text>
-          <Text>5 minutes</Text>
-          <View
-            style={{
-              borderBottomColor: 'grey',
-              borderBottomWidth: 3,
-              width: 300,
-              marginBottom: 10,
-            }}
-          />
-          <Text>Pick up:</Text>
-          <Text>Drop off:</Text>
 
-          <View
-            style={{
-              borderBottomColor: 'grey',
-              borderBottomWidth: 3,
-              width: 300,
-              marginBottom: 10,
-            }}
-          />
-          <Text>Schedule</Text>
+           {/* div here */}
+          <View>
+            <Text>Arriving</Text>
+            <Text style={styles.bold}>5 minutes</Text>
+          </View>
+
+          <View style={styles.line}></View>
+         {/* div here */}
+          <Text style={styles.pickdropplabel}>Pick up:        1:00pm</Text>
+          <Text style={styles.pickdropplabel}>Drop off:       1:15pm</Text>
+
+          <View style={styles.line}></View>
+         {/* div here */}
+          <Text style={styles.underline}>Schedule</Text>
           <Text>Mon - Thurs:    8am-9pm</Text>
           <Text>Friday:              8am-6pm</Text>
-          <Text>Pickups:</Text>
+          <Text style={styles.underline}>Pickups:</Text>
           <Text>Every hour e.g. 1:00pm</Text>
           <Text>Every 25th minute e.g. 1:25pm</Text>
 
-          <View
-            style={{
-              borderBottomColor: 'grey',
-              borderBottomWidth: 3,
-              width: 300,
-              marginBottom: 10,
-            }}
-          />
-
-        <Text>Website</Text>
+         <View style={styles.line}></View>
+        {/* div here */}
+        <Text style={styles.webitem}>Website</Text>
         <Image
-            style={styles.tofromicon}
+            style={styles.busicon}
             source={require("../assets/link_icon.png")}
           />
 
-
-        </View>
       </View>
     </>
   );
@@ -64,33 +47,60 @@ export default function TimeTableBox() {
 
 const styles = StyleSheet.create({
   container: {
-    position: "absolute",
-    top: 40,
+    // position: "absolute",
+    // top: 40,
     margin: 30,
     padding: 16,
     width: 300,
     height: 100,
     borderRadius: 10,
     backgroundColor: "white",
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    alignSelf: "center",
+    // alignItems: "center",
+    // alignSelf: "center",
   },
-  tofromicon: {
+  busicon: {
     height: 50,
     resizeMode: "contain",
     marginRight: 20,
     marginLeft: 0,
+    marginBottom:10,
+    
   },
   line: {
-    borderBottomWidth: 2,
+    borderBottomWidth: 1,
     borderColor: "lightgray",
-    width: 215,
+    width: 340,
     margin: 3,
   },
   textLable: {
     fontSize: 12,
     color: "gray",
   },
+  bold: {
+    fontWeight: 'bold',
+    fontSize:32
+  },
+  boldsmall:{
+    fontWeight: 'bold'
+  },
+  italic: {
+    fontStyle: 'italic'},
+
+  underline: {
+    textDecorationLine: 'underline',
+    fontSize:18,
+    marginTop: 3,
+    marginBottom:3
+  
+  },
+  
+  webitem: {
+    alignItems: 'center'
+  },
+  pickdropplabel:{
+    fontSize: 20,
+    marginBottom:3,
+    marginTop:3
+  }
+
 });
