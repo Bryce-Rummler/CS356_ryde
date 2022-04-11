@@ -3,32 +3,46 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Button } from "react-native";
 import BottomSheet from "reanimated-bottom-sheet";
 import ToFromBox from "./Components/ToFromBox";
+import MapPlaceholder from "./Components/MapPlaceholder";
 
 export default function App() {
-
   const [from, setFromBox] = React.useState({
     key: 0,
     route: "",
     stop: "",
-    color: ""
-  })
+    color: "",
+  });
 
   const [to, setToBox] = React.useState({
     key: 0,
     route: "",
     stop: "",
-    color: ""
-  })
+    color: "",
+  });
 
   updateFrom = (route) => {
     newRoute = {
       key: route.key,
       route: route.route,
       stop: route.stop,
-      color: route.color
-    }
+      color: route.color,
+    };
     setFromBox(newRoute);
-  }
+    console.log("update from called...");
+    console.log(newRoute);
+  };
+
+  updateTo = (route) => {
+    newRoute = {
+      key: route.key,
+      route: route.route,
+      stop: route.stop,
+      color: route.color,
+    };
+    setToBox(newRoute);
+    console.log("update to called....");
+    console.log(newRoute);
+  };
 
   const renderContent = () => (
     <View
@@ -57,7 +71,7 @@ export default function App() {
     <>
       <ToFromBox app={this} />
       <View style={styles.container}>
-        <Text>Map component should go here</Text>
+        <MapPlaceholder from={from} to={to} />
         <StatusBar style="auto" />
       </View>
       <BottomSheet

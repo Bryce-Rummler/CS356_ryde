@@ -55,6 +55,7 @@ export default function ToFromBox(props) {
       props.app.updateFrom(route);
     } else {
       onChangeTo(route.stop);
+      props.app.updateTo(route);
     }
   };
 
