@@ -65,24 +65,30 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 10,
     backgroundColor: "white",
+    // flexDirection: 'row',
+    // justifyContent: 'space-around'
     // alignItems: "center",
     // alignSelf: "center",
   },
   arriving:{
     flexDirection: 'row',
     justifyContent: 'space-around',
+    alignItems:"flex-start",
     // alignItems: 'flex-start'
   },
   schedule:{
     flexDirection: 'row',
     justifyContent: 'space-around',
+    alignItems:"flex-start",
   },
   websitelink:{
-    flexDirection:'column'
+    flexDirection:'column',
+    alignItems:"center",
   },
   pickdropp:{
     flexDirection: 'row',
     justifyContent: 'space-around',
+    alignItems:"flex-start",
     // justifyContent: 'space-around',
     // alignItems: 'flex-start'
   },
